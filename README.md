@@ -1,32 +1,29 @@
-## Client did not pay?
+## Client did not pay and you've lost access to his website?
 
 
-Add opacity to the body tag and decrease it every day until their site completely fades away. Set a due date and customize the number of days you offer them until the website is fully vanished. 
+Add opacity to the body tag and decrease it every day until their site completely fades away. Set a due date and customize the number of days you offer them until the website is fully vanished.  
+You can control the due date and the number of days freely from your server and even stop the fading away completely.
 
 
-```javascript
-/* change these variables as you wish */
-var due_date = new Date('2017-02-27');
-var days_deadline = 60;
-/* stop changing here */
+```not-paid.php
+// Change or add any values to this array for as many sites you wish
+// Or even replace it with something completely different, such as a database hook
+$sites = array(
+  'www.example2.com' => array(
+    'due_date' => '2019-11-05',
+    'days_deadline' => 10,
+    'stop' => FALSE
+  )
+);
 ```
 
-PS: Next time use [letsdeel.com](https://letsdeel.com ) to make sure you get paid.
-
 ## Usage
-Just load the not-paid.js file in ```<head>```
+Load the not-paid.js file in ```<head>``` tag and change the ```site``` variable on line 2 to match the values in the not-paid.php file.
 
-- A Wordpress plugin is also available [here](https://github.com/SurfEdge/not-paid-wp).
-- There's also an Android version available [here](https://github.com/theapache64/faded).
-- There's also an Windows Forms version available [here](https://github.com/g-otn/winforms-not-paid).
+## Authors
+- Inspired from Twitter (@riklomas)  
+- Original made by Ciprian (@kleampa), Romania  
+- Forked by ethernetlord (@ethernetlord)  
 
-## Author
-
-Inspired from twitter (@riklomas)
-Made by Ciprian (@kleampa), Romania
-
-PS: No PR's or issues will be accepted for this project. 
-
-## Advertising
-
-Because this repo is going viral from time to time to developers, I'm open for discussion if you want to promote a product/service in this README file. Just mail me at kleampa[]gmail
+## Disclaimer
+This script might be on the edge of legality (or even completely illegal) in some countries. Use it with caution. I don't take responsibility for any damage caused by this script; it was created as a joke.
